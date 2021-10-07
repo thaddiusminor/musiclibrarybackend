@@ -1,7 +1,12 @@
 const express = require('express');
 const repoContext = require('./repository-wrapper');
+const cors = require('cors');
+
+
 
 const app = express();
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.listen(3000, function (){
